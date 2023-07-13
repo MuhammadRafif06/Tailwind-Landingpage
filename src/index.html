@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,38 +9,59 @@
 </head>
 
 <body>
-    <div class="bg-cover bg-no-repeat bg-center h-screen" style="background-image: url('Images/hero-img.jpg');">
-        <nav class="px-20 py-12">
-            <div class="flex  items-center justify-between">
+    <div class="bg-cover bg-no-repeat bg-center h-screen sm:bg-center " style="background-image: url('Images/hero-img.jpg');">
+        <nav class="px-20 sm:px-20 py-12">
+            <div class="flex items-center justify-between">
                 <div>
-                    <img class="ml-14" src="Images/team..png" alt="">
+                    <img class="ml-4 mt-1 mb-4 sm:ml-14" src="Images/team..png" alt="">
                 </div>
-                <div class="space-x-14">
-                    <a href="#" class="text-white underline hover:text-white">Product</a>
-                    <a href="#" class="text-white underline hover:text-white">Blog</a>
-                    <a href="#" class="text-white underline hover:text-white">Support</a>
-                    <a href="#" class="text-white underline hover:text-white">Log In</a>
-                    <button class="bg-blue-500  hover:bg-blue-600 py-2 px-9 rounded">
+                <div class="hidden sm:flex space-x-2 mt-1 sm:space-x-14">
+                    <a href="#" class="text-white underline hover:text-white mt-1">Product</a>
+                    <a href="blog.html" class="text-white underline hover:text-white mt-1">Blog</a>
+                    <a href="#" class="text-white underline hover:text-white mt-1">Support</a>
+                    <a href="#" class="text-white underline hover:text-white mt-1">Log In</a>
+                    <button class="bg-blue-500 hover:bg-blue-600 py-2 px-6 rounded ">
                         <span class="text-white">Button Label</span>
                     </button>
                 </div>
+                <div class="sm:hidden">
+                    <button id="toggleMenu" class="text-white focus:outline-none">
+                        <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                            <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div id="collapseMenu" class="hidden sm:hidden">
+                <a href="#" class="block text-white underline hover:text-white">Product</a>
+                <a href="#" class="block text-white underline hover:text-white">Blog</a>
+                <a href="#" class="block text-white underline hover:text-white">Support</a>
+                <a href="#" class="block text-white underline hover:text-white">Log In</a>
+                <button class="block bg-blue-500 hover:bg-blue-600 text-white py-2 px-6 rounded mt-4">
+                    <span class="text-white">Button Label</span>
+                </button>
             </div>
         </nav>
-    
-        <div class="absolute inset-y-60 left-36">
-            <h1 class="text-5xl font-bold font-display text-white">Instant collaboration <br> for remote teams</h1>
-            <h3 class="text-1xl font-display pt-4 text-white">All-in-one place for your remote team to <br>chat, collaborate
-                and track project progress</h3>
-        </div>
-        <div class="absolute inset-y-96  left-36">
-            <button class="bg-white py-2 w-56 mt-14 text-left px-3 rounded">Email
-                <img class="absolute inset-y-16 left-48" src="Images/right-arrow-alt-regular-24.png" alt="">
-            </button>
-            <button class="bg-blue-500 hover:bg-blue-600 text-white py-2 ml-4 px-9 rounded">Button Label</button>
-        </div>
-    </div>
-    
+2
 
+        <div class="absolute inset-y-40 sm:inset-y-60 left-24 sm:left-36">
+            <h1 class="text-3xl sm:text-5xl font-bold font-display text-white text-center sm:text-left">Instant collaboration <br> for remote teams</h1>
+            <h3 class="text-base sm:text-1xl font-display pt-4 text-white text-center sm:text-left">All-in-one place for your remote team to <br>chat, collaborate and track project progress</h3>
+          </div>
+
+          <div class="absolute inset-y-80 sm:inset-y-96 left-24 sm:left-36">
+            <button class="bg-white hover:bg-gray-300 py-2 w-40 sm:w-56 mt sm:mt-14 text-left px-2 sm:px-3 rounded">Email
+              <img class="absolute inset-y-6 sm:inset-y-16 left-32 sm:left-48" src="Images/right-arrow-alt-regular-24.png" alt="">
+            </button>
+            <button class="bg-blue-500 hover:bg-blue-600 text-white py-2 mt-4 sm:ml-4 px-6 sm:px-9 rounded">Button Label</button>
+          </div>
+          
+    <script>
+        document.getElementById('toggleMenu').addEventListener('click', function () {
+            document.getElementById('collapseMenu').classList.toggle('hidden');
+        });
+    </script>
 </body>
 
 </html>
