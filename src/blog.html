@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
     <title>Document</title>
 </head>
+
 <body>
+    <!--Navbar-->
     <nav class="px-20 sm:px-20 py-12">
         <div class="flex items-center justify-between">
             <div>
-                <img class="ml-4 mt-1 mb-4 sm:ml-14" src="Images/team-light.png" alt="">
+                <a href="index.html">
+                    <img class="ml-4 mt-1 mb-4 sm:ml-14" src="Images/team-light.png" alt="">
+                </a>
             </div>
             <div class="hidden sm:flex space-x-2 mt-1 sm:space-x-14">
                 <a href="#" class="text-blue-900 font-semibold underline hover:text-white mt-1">Product</a>
@@ -24,8 +29,8 @@
             <div class="sm:hidden">
                 <button id="toggleMenu" class="text-white focus:outline-none">
                     <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
-                        <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
                     </svg>
                 </button>
             </div>
@@ -40,9 +45,56 @@
             </button>
         </div>
     </nav>
-    <div class="absolute inset-y-40 sm:inset-y-60 left-24 sm:left-36">
-        <h1 class="text-3xl sm:text-5xl font-bold font-display text-blue-950 text-center sm:text-left">Blog</h1>
-        <h3 class="text-base sm:text-1xl font-display pt-4 text-blue-900 text-center sm:text-left">Open-source threaded team chat that helps teams stay productive and focused.</h3>
-      </div>
+    <!--Navbar End-->
+
+    <!--Content-->
+    <div class="absolute  sm:inset-y-48 left-2 sm:left-32">
+        <h1 class="text-3xl sm:text-5xl font-bold font-display text-gray-900 text-center sm:text-left">Blog</h1>
+        <h3 class="text-base font-display pt-4 text-gray-900 text-center sm:text-left">Open-source threaded team chat
+            that helps teams stay productive and focused.</h3>
+    </div>
+
+    <div class="flex items-center justify-center min-h-screen container mx-auto mt-32">
+        <!--GRID-->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!--Card 1-->
+            <div class="rounded-xl shadow-lg">
+                <div class="p-5 flex flex-col">
+                    <div class="rounded-xl overflow-hidden">
+                        <img src="Images/Card 1.png" alt="">
+                    </div>
+                    <h1 class="text-2xl mt-5 font-medium">Open-source threaded</h1>
+                    <h1 class="text-2xl font-medium">team chat that help team</h1>
+                    <h1 class="text-2xl font-medium">stay productive</h1>
+                    <p class="text-slate-500 text-lg mt-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel id, ad temporibus aliquid quasi impedit aliquam sed illo cum, vitae quod nostrum iure omnis, quos sunt nihil ullam unde odit.</p>
+                </div>
+            </div>
+            <!--Card 2-->
+            <div class="rounded-xl shadow-lg">
+                <div class="p-5 flex flex-col">
+                    <div class="rounded-xl overflow-hidden">
+                        <img src="Images/Card 1.png" alt="">
+                    </div>
+                    <h1 class="text-2xl mt-5 font-medium">Open-source threaded</h1>
+                    <h1 class="text-2xl font-medium">team chat that help team</h1>
+                    <h1 class="text-2xl font-medium">stay productive</h1>
+                    <p class="text-slate-500 text-lg mt-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel id, ad temporibus aliquid quasi impedit aliquam sed illo cum, vitae quod nostrum iure omnis, quos sunt nihil ullam unde odit.</p>
+                </div>
+            </div>
+            <!--Card 3-->
+            <div class="rounded-xl shadow-lg">
+                <div class="p-5 flex flex-col">
+                    <div class="rounded-xl overflow-hidden">
+                        <img src="Images/Card 1.png" alt="">
+                    </div>
+                    <h1 class="text-2xl mt-5 font-medium">Open-source threaded</h1>
+                    <h1 class="text-2xl font-medium">team chat that help team</h1>
+                    <h1 class="text-2xl font-medium">stay productive</h1>
+                    <p class="text-slate-500 text-lg mt-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel id, ad temporibus aliquid quasi impedit aliquam sed illo cum, vitae quod nostrum iure omnis, quos sunt nihil ullam unde odit.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
