@@ -1,0 +1,73 @@
+    [
+        {
+            "id": "1",
+            "image": "src/Assets/Images/Card 1.png",
+            "title": "Open-Source threaded team chat that helps teams stay productive",
+            "description": "An internal investigation recently uncovered a vulnerability (indentified as CVE-2022-21706) in Zulip's invitation links.",
+            "date": "Mark Brooklyn | July 11, 2022"
+
+        },
+        {
+            "id": "2",
+            "image": "Assets/Images/Card 2.png",
+            "title": "Swap long video calls and emails for asynchronous video",
+            "description": "Meetings are essential for communication and team building, but they’re often unproductive. Asynchronous video to the rescue.",
+            "date": "Mark Brooklyn | July 11, 2022"
+
+        },
+        {
+            "id": "3",
+            "image": "Assets/Images/Card 3.png",
+            "title": "Flexibility reigns: six key takeaways from Frontiers 2022",
+            "description": "The future of work is having a digital HQ that works for you.",
+            "date": "Mark Brooklyn | July 11, 2022"
+
+        },
+        {
+            "id": "4",
+            "image": "Assets/Images/Card 4.png",
+            "title": "Team plus Sales Cloud: Your sales team’s new digital HQ",
+            "description": "Why everyone on your sales team will benefit from our app’s killer features.",
+            "date": "Mark Brooklyn | July 11, 2022"
+
+        },
+        {
+            "id": "5",
+            "image": "Assets/Images/Card 5.png",
+            "title": "What is digital culture?",
+            "description": "The teams best prepared for change use modern digital communication tools, feel comfortable learning new ones and continually adapt how they work.",
+            "date": "Mark Brooklyn | July 11, 2022"
+
+        }, {
+            "id": "6",
+            "image": "Assets/Images/Card 6.png",
+            "title": "Steve Dotto’s top 10 tips for overcoming workplace hiccups",
+            "description": "The executive producer of Dotto Tech shares his favorite Slack strategies for conquering common challenges in the digital-first workplace.",
+            "date": "Mark Brooklyn | July 11, 2022"
+
+        },
+        {
+            "id": "7",
+            "image": "Assets/Images/Card 7.png",
+            "title": "What’s new in Team: iPad updates, split-screen view and more",
+            "description": "An internal investigation recently uncovered a vulnerability (identified as CVE-2022-21706) in Zulip’s invitation links.",
+            "date": "Mark Brooklyn | July 11, 2022"
+
+        },
+        {
+            "id": "8",
+            "image": "Assets/Images/Card 8.png",
+            "title": "Drive more efficiency and cost savings with these updates to Workflow Builder",
+            "description": "New and upcoming automation features help your teams do more with less.",
+            "date": "Mark Brooklyn | July 11, 2022"
+
+        },
+        {
+            "id": "9",
+            "image": "Assets/Images/Card 9.png",
+            "title": "7 tips to onboard sales reps with ease",
+            "description": "It’s critical to bring new reps into the fold quickly and set them up for success. Here’s a look at how we do it at Slack.",
+            "date": "Mark Brooklyn | July 11, 2022"
+
+        }
+    ]
