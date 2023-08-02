@@ -1,14 +1,14 @@
     [
         {
             "id": "1",
-            "image": "src/Assets/Images/Card 1.png",
+            "image": "Assets/Images/Card 1.png",
             "title": "Open-Source threaded team chat that helps teams stay productive",
             "description": "An internal investigation recently uncovered a vulnerability (indentified as CVE-2022-21706) in Zulip's invitation links.",
             "date": "Mark Brooklyn | July 11, 2022"
 
         },
         {
-            "id": "2",
+            "id": "2",  
             "image": "Assets/Images/Card 2.png",
             "title": "Swap long video calls and emails for asynchronous video",
             "description": "Meetings are essential for communication and team building, but they’re often unproductive. Asynchronous video to the rescue.",
@@ -71,3 +71,6 @@
 
         }
     ]
+
+
+   

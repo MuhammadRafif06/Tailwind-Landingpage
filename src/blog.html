@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Blog</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
 </head>
+
 <body>
     <!--Navbar-->
-    <nav class="px-20 sm:px-20 py-12">
-        <div class="flex items-center justify-between">
+    <nav class="container mx-auto">
+        <div class="container flex items-center justify-between">
             <div>
                 <a href="index.html">
-                    <img class="ml-4 mt-1 mb-4 sm:ml-12" src="Images/team-light.png" alt="">
+                    <img src="Assets/Images/team-light.png" alt="">
                 </a>
             </div>
             <div class="hidden sm:flex space-x-2 mt-1 sm:space-x-14">
@@ -46,120 +48,84 @@
     <div class="flex items-center justify-center min-h-screen container mx-auto mt-32">
 
         <!--Content-->
-    <div class="absolute inset-y-40 sm:inset-y-36 sm:left-32">
-        <h1 class="text-3xl sm:text-5xl font-bold font-display text-gray-900 text-center sm:text-left">Blog</h1>
-        <h3 class="text-base font-display pt-4 text-gray-900 text-center sm:text-left">Open-source threaded team chat
-            that helps teams stay productive and focused.</h3>
+        <div class="absolute inset-y-40 sm:inset-y-36 sm:left-32">
+            <h1 class="text-3xl sm:text-5xl font-bold font-display text-gray-900 text-center sm:text-left">Blog</h1>
+            <h3 class="text-base font-display pt-4 text-gray-900 text-center sm:text-left">Open-source threaded team
+                chat that helps teams stay productive and focused.</h3>
+        </div>
+
+        <div id="card-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div id="card" class="shadow-lg mt-10 bg-white p-8 left-2 sm:left-32"></div>
+        </div>
     </div>
 
-        <!--GRID-->
-        <div id="card-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <footer class="bg-gray-800 text-white w-screen ">
+        <div class="container mx-auto grid grid-cols-1 sm:grid-cols-3 gap-4 py-8 px-4">
 
+            <div class="sm:col-span-1">
+                <img class="" src="Assets/Images/team..png" alt="Logo">
+                <p>Collaboration Platform <br> for modern team.</p>
+            </div>
+
+            <div class="sm:col-span-1">
+                <h3 class="text-2xl mb-3 mt-3">Company</h3>
+                <h3 class="text-1xl mt-6">Product</h3>
+                <h3 class="text-1xl mt-4">Blog</h3>
+                <h3 class="text-1xl mt-4">Support</h3>
+            </div>
+
+            <div class="mr-5">
+                <h3 class="text-2xl mb-3 mt-3">Features</h3>
+                <h3 class="text-1xl mt-6">+1 234 89</h3>
+                <h3 class="text-1xl mt-4"></h3>
+            </div>
+
+            <div class="sm:col-span-1">
+                <h3 class="text-2xl mb-3 mt-3">Contact</h3>
+                <h3 class="text-1xl mt-6">+1 234 89</h3>
+                <h3 class="text-1xl mt-4"></h3>
+            </div>
+        </div>
+    </footer>
+    
     <script>
-        // Data JSON
-        var data =     [
-        {
-            "id": "1",
-            "image": "Assets/Images/Card 1.png",
-            "title": "Open-Source threaded team chat that helps teams stay productive",
-            "description": "An internal investigation recently uncovered a vulnerability (indentified as CVE-2022-21706) in Zulip's invitation links.",
-            "date": "Mark Brooklyn | July 11, 2022"
+        // Fetch the data from content.json
+        fetch('content.json')
+            .then(response => response.json())
+            .then(data => {
+                // Membuat elemen card dan menambahkannya ke dalam container
+                var cardContainer = document.getElementById("card-container");
 
-        },
-        {
-            "id": "2",
-            "image": "Assets/Images/Card 2.png",
-            "title": "Swap long video calls and emails for asynchronous video",
-            "description": "Meetings are essential for communication and team building, but they’re often unproductive. Asynchronous video to the rescue.",
-            "date": "Mark Brooklyn | July 11, 2022"
+                data.forEach(function (item) {
+                    var card = document.getElementById("card");
+                    card.className = "shadow-lg mt-10 bg-white p-8 left-2 sm:left-32";
+                    
+                    var image = document.getElementById("img");
+                    image.className = "rounded-lg overflow-hidden flex justify-center";
+                    image.src = item.image;
+                    card.appendChild(image);
 
-        },
-        {
-            "id": "3",
-            "image": "Assets/Images/Card 3.png",
-            "title": "Flexibility reigns: six key takeaways from Frontiers 2022",
-            "description": "The future of work is having a digital HQ that works for you.",
-            "date": "Mark Brooklyn | July 11, 2022"
+                    var title = document.createElement("text");
+                    title.className = "text-2xl mt-5 font-medium";
+                    title.textContent = item.title;
+                    card.appendChild(title);
 
-        },
-        {
-            "id": "4",
-            "image": "Assets/Images/Card 4.png",
-            "title": "Team plus Sales Cloud: Your sales team’s new digital HQ",
-            "description": "Why everyone on your sales team will benefit from our app’s killer features.",
-            "date": "Mark Brooklyn | July 11, 2022"
+                    var description = document.createElement("p");
+                    description.className = "text-slate-500 text-lg mt-3";
+                    description.textContent = item.description;
+                    card.appendChild(description);
 
-        },
-        {
-            "id": "5",
-            "image": "Assets/Images/Card 5.png",
-            "title": "What is digital culture?",
-            "description": "The teams best prepared for change use modern digital communication tools, feel comfortable learning new ones and continually adapt how they work.",
-            "date": "Mark Brooklyn | July 11, 2022"
+                    var date = document.createElement("p");
+                    date.className = "text-gray-500";
+                    date.textContent = item.date;
+                    card.appendChild(date);
 
-        }, {
-            "id": "6",
-            "image": "Assets/Images/Card 6.png",
-            "title": "Steve Dotto’s top 10 tips for overcoming workplace hiccups",
-            "description": "The executive producer of Dotto Tech shares his favorite Slack strategies for conquering common challenges in the digital-first workplace.",
-            "date": "Mark Brooklyn | July 11, 2022"
-
-        },
-        {
-            "id": "7",
-            "image": "Assets/Images/Card 7.png",
-            "title": "What’s new in Team: iPad updates, split-screen view and more",
-            "description": "An internal investigation recently uncovered a vulnerability (identified as CVE-2022-21706) in Zulip’s invitation links.",
-            "date": "Mark Brooklyn | July 11, 2022"
-
-        },
-        {
-            "id": "8",
-            "image": "Assets/Images/Card 8.png",
-            "title": "Drive more efficiency and cost savings with these updates to Workflow Builder",
-            "description": "New and upcoming automation features help your teams do more with less.",
-            "date": "Mark Brooklyn | July 11, 2022"
-
-        },
-        {
-            "id": "9",
-            "image": "Assets/Images/Card 9.png",
-            "title": "7 tips to onboard sales reps with ease",
-            "description": "It’s critical to bring new reps into the fold quickly and set them up for success. Here’s a look at how we do it at Slack.",
-            "date": "Mark Brooklyn | July 11, 2022"
-
-        }
-    ]
-
-        // Membuat elemen card dan menambahkannya ke dalam container
-        var cardContainer = document.getElementById("card-container");
-
-        data.forEach(function(item) {
-            var card = document.createElement("div");
-            card.className = "rounded-lg shadow-lg mt-10 bg-white p-8 left-2 sm:left-32";
-
-            var image = document.createElement("img");
-            image.className = "rounded-xl overflow-hidden flex justify-center";
-            image.src = item.image;
-            card.appendChild(image);
-
-            var title = document.createElement("h3");
-            title.className = "text-2xl mt-5 font-medium";
-            title.textContent = item.title;
-            card.appendChild(title);
-
-            var description = document.createElement("p");
-            description.className = "text-slate-500 text-lg mt-3";
-            description.textContent = item.description;
-            card.appendChild(description);
-
-            var date = document.createElement("p");
-            date.className = "text-gray-500";
-            date.textContent = item.date;
-            card.appendChild(date);
-
-            cardContainer.appendChild(card);
-        });
+                    cardContainer.appendChild(card);
+                });
+            })
+            .catch(error => console.error('Error fetching data:', error));
     </script>
+
 </body>
+
 </html>
